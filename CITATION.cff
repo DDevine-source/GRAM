@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software in academic work, please cite it as below."
+authors:
+  - family-names: Devine
+    given-names: Derek M.
+title: "GRAM: Geometric Regularized Associative Memory"
+version: 0.1.0
+date-released: 2025-12-31
+url: "https://github.com/DDevine-source/GRAM"
+license: BSD-3-Clause
+
