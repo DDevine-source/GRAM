@@ -325,7 +325,7 @@ The guiding principle of GRAM is:
 > **Stability arises not from suppressing randomness, but from matching its
 > scale to the energy gradient through structured feedback.**
 
-GRAM generalizes gravitational equilibrium to associative learning using Structured Randomness and Gravitational Information Dynamics. When stochastic perturbations are guided rather than uncontrolled, they can stabilize and enhance complex systems.
+GRAM generalizes gravitational equilibrium to associative learning using Structured Randomness and Gravitational Information Dynamics. **When stochastic perturbations are guided rather than uncontrolled, they can stabilize and enhance complex systems.**
 
 ---
 
