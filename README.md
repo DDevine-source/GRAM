@@ -87,6 +87,9 @@ or equivalently:
 
 ΔA = -∇ₐE + Rφ(mᵢ) 
 
+Law (informal):
+In recursive stochastic systems with local saturation and margin-dependent noise, stability emerges when stochastic flux scales with curvature according to a fixed ratio.  Under this condition, the system converges to a manifold-preserving attractor rather than a point attractor.
+
 where:
 - **ΔA** is the realized change in state,
 - **∇ₐE** is curvature (the gradient of an effective potential),
@@ -287,6 +290,8 @@ Reliability is inherent to the design: GRAM performs best when multiple objectiv
 - **Transformers** optimize predictive loss but do not preserve geometric structure, making them ill-suited for manifold reconstruction.
 
 GRAM’s jammed-PMF and NEAR-region mechanisms make it well suited for these settings, particularly in **radiological anomaly detection under structured noise**.
+
+**Existing associative memories optimize scalar objectives and therefore cannot preserve multi-objective manifold geometry under structured noise.  GRAM provably does, and the failure mode of baselines is structural, not parametric.**
 
 ---
 
