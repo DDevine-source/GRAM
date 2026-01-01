@@ -61,7 +61,9 @@ GRAM/
 └── README.md                   # High-level description and theory
 
 ```
-            
+Note: Some analysis scripts and notebooks listed above are planned and will be added in subsequent updates.
+
+---
 **GRAM** is a highly structured associative memory model that integrates:
 
 - **Gravitational Information Dynamics (GID)**  
