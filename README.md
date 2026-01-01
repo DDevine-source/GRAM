@@ -75,6 +75,10 @@ into a *gravitationally regularized, recursively annealed* architecture
 that is both **robust under noise** and **aligned with multi-objective
 frontiers** (for example, Cost–SSR Pareto curves).
 
+**Motivation** GRAM is motivated by the observation that many associative memory models implicitly reduce multi-objective problems to scalar optimization, which can distort or collapse the underlying manifold structure under structured noise.
+
+**Key insight** GRAM is designed for regimes where scalar objective optimization breaks down—specifically, when the task requires preserving multi-objective manifold geometry in the presence of structured noise.
+
 ---
 
 ## Conceptual summary
