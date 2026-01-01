@@ -62,8 +62,7 @@ GRAM/
 
 ```
             
-**GRAM** (Geometric Regularized Associative Memory) is a
-highly structured associative memory model that integrates:
+**GRAM** is a highly structured associative memory model that integrates:
 
 - **Gravitational Information Dynamics (GID)**  
 - **Structured Randomness (SR)** via φ-annealed stochastic flux  
@@ -105,8 +104,7 @@ GRAM implements this law at the level of associative recall:
   recall is accepted as **KNOWN** only when deviations are consistent with
   structured randomness (otherwise **NEAR-UNKNOWN** or **UNKNOWN**).
 
-GRAM (Geometric Regularized Associative Memory) is an associative memory model that
-combines Hebbian fields with gravitational information dynamics, including:
+GRAM is an associative memory model that combines Hebbian fields with gravitational information dynamics, including:
 
 - SPR/γ-based spectral diagnostics
 - Feigenbaum–golden φ-annealed guided dither
