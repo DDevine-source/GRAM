@@ -364,11 +364,16 @@ To enable JIT acceleration:
 ```bash
 pip install numba
 ```
-Frontier / analysis extras
+
+**Frontier / analysis extras**
 For frontier fitting, plotting, and notebooks you will also want:
+
 •	pandas (for sweep data like Sweep_Updated.csv in the colab llinked below)
+
 •	matplotlib (for figures)
+
 •	jupyter / notebook or jupyterlab (for exploration)
+
 ```bash
 pip install pandas matplotlib jupyter
 ```
