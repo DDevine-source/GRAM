@@ -31,6 +31,8 @@ See `LICENSE` for usage terms and `CITATION.cff` for citation guidance.
 
 Developed by **Derek M. Devine** (2025).
 
+## Who is this for
+GRAM is intended for researchers working on associative memory, manifold learning, and structured inference in noisy, multi-objective domains.
 
 ## Repository structure
 
@@ -348,44 +350,38 @@ Optional but recommended:
 To install the minimal stack:
 ```bash
 pip install numpy
-
+```
 To enable JIT acceleration:
+```bash
 pip install numba
-
+```
 Frontier / analysis extras
 For frontier fitting, plotting, and notebooks you will also want:
 •	pandas (for sweep data like Sweep_Updated.csv in the colab llinked below)
 •	matplotlib (for figures)
 •	jupyter / notebook or jupyterlab (for exploration)
-
+```bash
 pip install pandas matplotlib jupyter
-
-General Colab link that contains extra benchmarking scripts for the multi-energy frontier fitting proof of concept/use case:
-https://colab.research.google.com/drive/1CTk4bNcqYMX_h1c4onQuJCSglXSMsFAs?usp=sharing
-
-
+```
 Using GRAM from this repo
 If you clone the repo:
-
+```bash
 git clone https://github.com/DDevine-source/GRAM.git
 cd GRAM
 
 pip install -e .
-
-from hosam import HOSAM as GRAM
-from gram_variants import GRAM_plain, GRAM_phiFull
-from gram_recursive import GRAMFrontierEstimator
-
-Quick start
-1. Basic GRAM usage
-
+```
+## Quick start Basic GRAM usage
 At the top of evey script:
+```bash
 import numpy as np
 from hosam import HOSAM as GRAM
 from gram_variants import GRAM_plain, GRAM_phiFull #optional, as well as adding the other GRAM variants here
 from gram_recursive import GRAMFrontierEstimator #optional
+```
 ------------------------
-# Example code:
+## Example code:
+```bash
 # patterns_bits01: [P, N] array of {0,1} patterns
 patterns_bits01 = np.random.randint(0, 2, size=(256, 64), dtype=np.uint8)
 
@@ -394,7 +390,11 @@ gram = GRAM(patterns_bits01)
 query_bits = np.random.randint(0, 2, size=(64,), dtype=np.uint8)
 decision, idx, meta = gram.query(query_bits)
 print(decision, idx)
+```
 
+## Interactive example (Colab)
+General Colab link that contains extra benchmarking scripts for the multi-energy frontier fitting proof of concept/use case:
+https://colab.research.google.com/drive/1CTk4bNcqYMX_h1c4onQuJCSglXSMsFAs?usp=sharing
 
 ## License
 
