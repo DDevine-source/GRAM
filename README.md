@@ -66,32 +66,34 @@ GRAM/
 │   ├─ Willshaw CMM
 │   └─ Sparse Distributed Memory
 │
-├── analyze_feature_importance_gram.py
-│   # Bit-level and variable-level importance analysis via ablation
-│   # Outputs learned feature-selection (FS) masks
-│
-├── learn_fs_mask.py
-│   # Learns and saves FS masks from importance analysis
-│
 ├── run_compare_constraint_objective_seeds_newGRAM.py
 │   # Main benchmarking script:
-│   # multi-objective, constraint-aware GRAM vs AM baselines
+│   # multi-objective, constraint-aware GRAM vs AM baselines, outputs mean and median J, Cost, SCR, SSR and runtime comparisons
 │
-├── analyze_objective_2D_multiobj_Jmedian_no_GRNN.py
+├── analyze_objective_2D_multiobj_Jmedian.py
 │   # 2D multi-objective frontier distance and knee-point analysis
-│
-├── plot_multiobj_Jmedian_distances_no_GRNN.py
+|
+|── plot_multiobj_Jmedian_distances.py
 │   # Visualization of J-median distances to utopia points
+|
+├── analyze_feature_importance_gram.py
+│   # If interested in learning feature importance.  Bit-level and variable-level importance analysis via ablation
+│   # Outputs learned feature-selection (FS) masks.  Run this first, then run learn_fs_mask.
 │
-├── manifold_minimal_surfaces.py
-│   # Minimal-manifold reconstruction and quadratic surface fitting
+├── learn_fs_mask.py
+│   # Run after analyze_feature_importance_gram, Learns and saves FS masks from importance analysis
 │
-├── compare_surfaces_metrics.py
+|── manifold_minimal_surfaces.py
+│   # Minimal-manifold reconstruction and quadratic surface fitting.  Run this first, then run compare_surfaces_metrics.
+|   # Generates Plots of 3D manifold fits for each AM, along with R^2 and Betas
+|
+|── compare_surfaces_metrics.py
 │   # Manifold error, curvature, and Hessian-based comparison vs truth
+|   # Run after manifold_minimal_surfaces, generates R^2, RMSE, L2 norm, Max abs error, Mean and Max rel error
 │
 ├── gram_robustness_experiment.py # Bit-flip robustness tests (0–50%)                       
 │                                 # Reports TPR / FPR / runtime across seeds
-├── frontier_examples.ipynb       # Interactive frontier fitting and comparison
+|
 └── README.md                     # High-level description, theory, and usage
 ```
 Note: Some analysis scripts and notebooks listed above are planned and will be added in subsequent updates.
