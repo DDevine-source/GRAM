@@ -38,28 +38,61 @@ GRAM is intended for researchers working on associative memory, manifold learnin
 
 ```text
 GRAM/
-├── __init__.py                 # Treat as a GRAM package
-├── gram.py                     # Core GRAM / HOSAM implementation
-│                                # - SPR / gamma diagnostics
-│                                # - φ-scheduled bit flips (pre-denoise + NEAR)
-│                                # - Jammed-PMF multi-index sampling
-│                                # - τ modes (linear / φ)
-│                                # - evaluate(), corrupt_bits()
-├── gram_recursive.py           # Higher-level wrappers:
-│                                # - GRAMTime
-│                                # - GRAMCoarseFine
-│                                # - GRAMFeatureSelector
-│                                # - GRAMFrontierEstimator
-├── gram_variants.py            # Convenience variants:
-│                                # - GRAM_plain()
-│                                # - GRAM_phi()
-│                                # - GRAM_phiFull()
-├── gram_robustness_experiment.py
-│                                # Bit-flip robustness tests (0–50%)
-│                                # Reports TPR / FPR / runtime across seeds
-├── frontier_examples.ipynb     # Frontier fitting and comparison notebook
-└── README.md                   # High-level description and theory
-
+├── __init__.py                  # Package exports and public API
+├── gram.py                      # Core GRAM / HOSAM implementation
+│   ├─ SPR / gamma diagnostics
+│   ├─ φ-scheduled bit flips (pre-denoise + NEAR)
+│   ├─ jammed-PMF multi-index sampling
+|   |─ τ modes (linear / φ)
+│   └─ evaluate(), corrupt_bits()
+│
+├── gram_variants.py             # GRAM variants and φ-based extensions
+│   ├─ GRAM_plain
+│   ├─ GRAM_phiJ
+│   ├─ GRAM_phiFull
+│   └─ Feigenbaum-modulated variants
+│
+├── gram_recursive.py            # Recursive and hierarchical GRAM wrappers
+│   ├─ GRAMFeatureSelector (FS)
+|   ├─ GRAMTime
+│   ├─ GRAMCoarseFine
+│   └─ Frontier-aware selectors
+│
+├── baselines_am.py              # Associative memory baselines
+│   ├─ Hopfield
+│   ├─ Modern Hopfield (MHN)
+│   ├─ DAM
+│   ├─ Gripon–Berrou AM
+│   ├─ Willshaw CMM
+│   └─ Sparse Distributed Memory
+│
+├── analyze_feature_importance_gram.py
+│   # Bit-level and variable-level importance analysis via ablation
+│   # Outputs learned feature-selection (FS) masks
+│
+├── learn_fs_mask.py
+│   # Learns and saves FS masks from importance analysis
+│
+├── run_compare_constraint_objective_seeds_newGRAM.py
+│   # Main benchmarking script:
+│   # multi-objective, constraint-aware GRAM vs AM baselines
+│
+├── analyze_objective_2D_multiobj_Jmedian_no_GRNN.py
+│   # 2D multi-objective frontier distance and knee-point analysis
+│
+├── plot_multiobj_Jmedian_distances_no_GRNN.py
+│   # Visualization of J-median distances to utopia points
+│
+├── manifold_minimal_surfaces.py
+│   # Minimal-manifold reconstruction and quadratic surface fitting
+│
+├── compare_surfaces_metrics.py
+│   # Manifold error, curvature, and Hessian-based comparison vs truth
+│
+├── gram_robustness_experiment.py # Bit-flip robustness tests (0–50%)                       
+│                                 # Reports TPR / FPR / runtime across seeds
+├── frontier_examples.ipynb       # Interactive frontier fitting and comparison
+└── README.md                     # High-level description, theory, and usage
 ```
 Note: Some analysis scripts and notebooks listed above are planned and will be added in subsequent updates.
 
