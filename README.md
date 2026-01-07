@@ -1,6 +1,6 @@
-# GRAM — Geometric Regularized Associative Memory
+# GRAM — Geometrically Regularized Associative Memory
 
-GRAM (Geometric Regularized Associative Memory) is an associative-memory framework
+GRAM (Geometrically Regularized Associative Memory) is an associative-memory framework
 for robust retrieval and open-set recognition in high-dimensional spaces.
 
 The method uses geometric regularization, field-based scoring, and controlled
@@ -29,7 +29,7 @@ collaborative development.
 
 See `LICENSE` for usage terms and `CITATION.cff` for citation guidance.
 
-Developed by **Derek M. Devine** (2025).
+Initial Development by **Derek M. Devine** (2025).
 
 ## Who is this for
 GRAM is intended for researchers working on associative memory, manifold learning, and structured inference in noisy, multi-objective domains.
