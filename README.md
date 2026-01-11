@@ -1,25 +1,15 @@
 # GRAM — Geometrically Regularized Associative Memory
 
-GRAM (Geometrically Regularized Associative Memory) is an associative-memory framework
-for robust retrieval and open-set recognition in high-dimensional spaces.
+GRAM (Geometrically Regularized Associative Memory) is a geometry-preserving associative-memory framework for robust inference, retrieval, and structured exploration in high-dimensional, noisy, and multi-objective systems.
 
-The method uses geometric regularization, field-based scoring, and controlled
-annealing to stabilize recall and guide exploration near decision boundaries,
-without relying on a single global scalar objective.
+GRAM is designed for regimes where classical associative memories and scalar-objective optimization fail—specifically, when global geometric structure, curvature, and trajectory shape matter more than local similarity or loss minimization.
 
-From a theoretical perspective, GRAM’s geometric regularization can also be
-interpreted through a gravitational lens: memory states are attracted along a
-learned representation manifold, where local curvature and field strength guide
-retrieval dynamics.
+# Core Idea:
+Rather than optimizing a single scalar objective, GRAM operates on a learned representation manifold, treating stored states as masses embedded in an information geometry. Queries evolve by gravitational descent on this manifold, guided by structured stochasticity and geometric regularization rather than deterministic energy minimization.
 
-Under this view, GRAM behaves as a gravitational manifold learner, performing
-stable recall from multi-objective spaces by minimizing local curvature rather
-than optimizing a global loss.  The framework supports semi-supervised operation
-and physics-structured inference on learned manifolds.
+In this sense, GRAM behaves as a gravitational manifold learner: stability, recall, and inference arise from curvature-aware dynamics instead of fixed-point attraction.  Stable recall is performed from multi-objective spaces by minimizing local curvature rather than optimizing a global loss.  The framework supports semi-supervised operation and physics-structured inference on learned manifolds.
 
- — core algorithm by Derek Devine.
-
-
+# Notes about Repository:
 This repository contains the core GRAM algorithm and supporting research code for
 structured associative memory, open-set retrieval, and controlled exploration of
 ambiguous states.
@@ -33,6 +23,66 @@ Initial Development by **Derek M. Devine** (2025).
 
 ## Who is this for
 GRAM is intended for researchers working on associative memory, manifold learning, and structured inference in noisy, multi-objective domains.
+
+## Two Regimes of GRAM (Key Concept)
+GRAM supports **two complementary regimes**, depending on which level of description is treated as exact.
+
+**1. GRAM as Inference on Emergent Geometry**
+
+(Used in epidemic modeling, forecasting, Agricultural problems like farming optimization and closure problems)
+| Aspect        | Role                                                    |
+| ------------- | ------------------------------------------------------- |
+| Exact object  | Continuous trajectory manifold                          |
+| Approximation | Discrete samples / kNN / bitstrings                     |
+| GRAM’s role   | Efficient inference, recall, and uncertainty estimation |
+
+In this regime, the manifold is assumed to already exist (it's induced by an epidemic or network process). **GRAM exploits its geometry to infer future behavior**, identify turning points, and provide fast, uncertainty-aware predictions.
+
+This is the regime used in:
+- **epidemic trajectory forecasting**  
+- **PMF-GRAM closure replacing or complementing mean-field models**  
+- **early-warning detection via trajectory entropy**  
+
+**2. GRAM-like Dynamics as Emergence of Geometry**
+
+(Used in gravity-like dynamics and emergent geometry studies)
+
+| Aspect         | Role                             |
+| -------------- | -------------------------------- |
+| Exact object   | Discrete stochastic dynamics     |
+| Approximation  | Continuous geometric manifold    |
+| GRAM-like role | Generative emergence of geometry |
+
+In this regime, **discrete stochastic memory is fundamental**, and **geometry itself emerges** as a **stable attractor of trajectory-memory dynamics**. Attraction, curvature, interaction, and basins of stability arise without assuming spacetime or force laws.
+
+This regime demonstrates that:
+
+- **geometry can be recognized, not imposed**  
+- **mass corresponds to information density**  
+- **force corresponds to gradients of probabilistic concentration**  
+- **curvature corresponds to rates of future divergence**
+
+important:
+> **These gravity-like results were demonstrated using a GRAM-inspired stochastic memory process that isolates future-conditioned recall. The full certified GRAM retrieval stack is not required for the emergence of these effects.**
+
+**Why This Matters**
+
+Most emergent-gravity approaches:
+
+ - **start from discrete microstructure**  
+ - **impose update rules**  
+-  **analytically derive geometry**  
+ 
+In contrast, GRAM-like dynamics:
+
+-  **use memory of futures**  
+-  **define distance by trajectory similarity**  
+-  **allow geometry to emerge as a stable attractor**  
+-  **produce interaction, curvature, and basins dynamically**  
+
+This makes GRAM unusually well-suited for studying both:
+ **inference on complex systems,**  and
+ **emergence of geometry itself**
 
 ## Repository structure
 
