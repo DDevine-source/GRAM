@@ -148,6 +148,25 @@ GRAM/
 ```
 Note: Some analysis scripts and notebooks listed above are planned and will be added in subsequent updates.
 
+
+## Key Results
+
+### Figure 1 — Constraint-Aware Objective Performance
+![Constraint-Aware Objective Performance](figures/gram_comparisons/fig14_constraint_objective_table.png)
+
+### Figure 2 — Learned Manifold Geometry
+![Learned Manifold Geometry](figures/gram_comparisons/fig15_manifold_surfaces.png)
+
+### Figure 3 — Cost Surface Reconstruction Error
+![Cost Surface Error Heatmaps](figures/gram_comparisons/fig16_error_heatmaps.png)
+
+### Figure 4 — Distance-to-Utopia (Median Cost)
+![Distance to Utopia](figures/gram_comparisons/fig27_utopia_cost_distance.png)
+
+### Figure 5 — Normalized Score Comparison
+![Normalized Score Comparison](figures/gram_comparisons/normalized_score.png)
+
+
 ---
 **GRAM** is a highly structured associative memory model that integrates:
 
