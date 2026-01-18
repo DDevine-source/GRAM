@@ -17,9 +17,15 @@ ambiguous states.
 GRAM is intended as a research framework for experimentation, extension, and
 collaborative development.
 
+## License
+
+GRAM is released under a custom Human-Rights and Consent-Restricted
+Research License, with additional BSD-style attribution and
+non-endorsement conditions. See the LICENSE file for full terms.
+
 See `LICENSE` for usage terms and `CITATION.cff` for citation guidance.
 
-Initial Development by **Derek M. Devine** (2025).  Manuscript in preparation.
+Initial development by **Derek M. Devine** (2025). Manuscript in preparation.
 
 ## Who is this for
 GRAM is intended for researchers working on associative memory, manifold learning, and structured inference in noisy, multi-objective domains.  Epidemic modeling, the weather, agricultural, and better interpretation of radiological data are prime examples of where GRAM can be naturally applied.  GRAM is applicable to Complex systems in general. 
