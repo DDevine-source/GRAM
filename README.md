@@ -19,7 +19,7 @@ collaborative development.
 
 See `LICENSE` for usage terms and `CITATION.cff` for citation guidance.
 
-Initial Development by **Derek M. Devine** (2025).
+Initial Development by **Derek M. Devine** (2025).  Manuscript in preparation.
 
 ## Who is this for
 GRAM is intended for researchers working on associative memory, manifold learning, and structured inference in noisy, multi-objective domains.  Epidemic modeling, the weather, agricultural, and better interpretation of radiological data are prime examples of where GRAM can be naturally applied.  GRAM is applicable to Complex systems in general. 
