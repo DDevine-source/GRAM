@@ -7,7 +7,7 @@ GRAM is designed for regimes where classical associative memories and scalar-obj
 # Core Idea:
 Rather than optimizing a single scalar objective, GRAM operates on a learned representation manifold, treating stored states as masses embedded in an information geometry. Queries evolve by gravitational descent on this manifold, guided by structured stochasticity and geometric regularization rather than deterministic energy minimization.
 
-In this sense, GRAM behaves as a gravitational manifold learner: stability, recall, and inference arise from curvature-aware dynamics instead of fixed-point attraction.  Stable recall is performed from multi-objective spaces by minimizing local curvature rather than optimizing a global loss.  The framework supports semi-supervised operation and physics-structured inference on learned manifolds.
+In this sense, GRAM behaves as a geometric manifold learner: stability, recall, and inference arise from curvature-aware dynamics instead of fixed-point attraction.  Stable recall is performed from multi-objective spaces by minimizing local curvature rather than optimizing a global loss.  The framework supports semi-supervised operation and physics-structured inference on learned manifolds.
 
 # Notes about Repository:
 This repository contains the core GRAM algorithm and supporting research code for
