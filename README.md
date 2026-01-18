@@ -210,7 +210,7 @@ Reported are the median and mean objective values J=LCC_norm+(1-SSR)+(1-SCR), al
 <p align="left">
   <em>
   Figure 2. Comparison of learned cost–SSR–SCR manifolds across methods.
-Each surface represents the reconstructed multi-objective response learned by a different algorithm. GRAM variants preserve the curvature, slope, and topology of the underlying Pareto manifold, closely matching the TRUE surface. In contrast, classical associative memories (Hopfield, DAM, MHN) and baseline methods exhibit geometric distortions, collapsed basins, or exaggerated curvature, indicating loss of structural fidelity. This highlights GRAM’s ability to preserve global manifold geometry rather than merely optimizing scalar objectives.
+  GRAM preserves global manifold curvature and topology, while baselines distort or collapse it.
   </em>
 </p>
 
@@ -222,18 +222,44 @@ Each surface represents the reconstructed multi-objective response learned by a 
 <p align="left">
   <em>
   Figure 3. Absolute reconstruction error heatmaps for cost surfaces across methods.
-Heatmaps show pointwise absolute error between each method’s reconstructed cost surface and the TRUE manifold across the SSR–SCR domain. GRAM variants exhibit uniformly low error regions and smooth gradients, indicating stable and faithful manifold reconstruction. Competing methods display higher error magnitudes and structured artifacts, reflecting local bias, over-fitting, or geometric collapse. GRAM_feigcooling reconstructs with errors at an order of magnitude lower (yellow). These results demonstrate GRAM’s robustness as a geometry-preserving associative model.
+ GRAM variants exhibit uniformly low error, indicating faithful manifold reconstruction. GRAM_feigcooling reconstructs with errors at an order of magnitude lower (yellow). These results demonstrate GRAM’s robustness as a geometry-preserving associative model.
   </em>
 </p>
 
-### Figure 4 — Distance-to-Utopia (Median Cost)
+### Figure 4 — Distance-to-Utopia Analysis (Median Cost Trade-off)
+<p align="center">
+  <img src="figures/distance_utopia_tradeoff.png">
+</p>
+
+<p align="left">
+  <em>
+  Figure 4. Distance-to-utopia (J_median=0, Cost_min ) analysis for median objective versus cost trade-offs.
+Lower values indicate more reliable multi-objective balanceGRAM_φFull and DAM achieve the smallest distances, with GRAM_φFull maintaining superior balance across cost, SSR, and SCR without collapsing manifold structure. 
+  </em>
+</p>
+
+### Figure 5 — Four-axis comparison of stengths
 <p align="center">
   <img src="figures/fig27_utopia_cost_distance.png">
 </p>
+<p align="left">
+  <em>
+  Figure 5. Four-axis comparison of method roles in performance–geometry–bias space.  Point size encodes mean cost, with larger points indicating higher cost. The plot illustrates how different algorithms occupy distinct functional regimes: GRAM variants span a spectrum from scalar-optimal (GRAM_φFull) to geometry-preserving (GRAM_FS_φFull and GRAM_FeigCooling), while classical associative memories and baselines (Hopfield, DAM, GB-AM/MHN) exhibit stronger trade-offs between cost, bias, and geometric fidelity.
+  </em>
+</p>
 
-### Figure 5 — Normalized Score Comparison
-![Normalized Score Comparison](figures/normalized_score.png)
+### Figure 6 — Qualitative comparison of GRAM variants and baseline associative memories
+<p align="center">
+  <img src="figures/">
+</p>
+<p align="left">
+  <em>
+  Figure 6. Comparisonns cross multiple structural dimensions.  Starred entries denote standout strengths along a given dimension. GRAM variants occupy complementary regimes—ranging from scalar-optimal (GRAM_φFull), to geometry-preserving (GRAM_FS_φFull), to low-sample annealing specialists (GRAM_FeigCooling)—while classical associative memories and baselines exhibit systematic trade-offs and structural limitations, particularly in geometry preservation and low-sample stability.
+  </em>
+</p>
 
+  </em>
+</p>
 
 ---
 **GRAM** is a highly structured associative memory model that integrates:
