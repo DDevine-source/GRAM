@@ -1,15 +1,134 @@
-BSD 3-Clause License
-
-Copyright (c) 2025, Derek M. Devine
+GRAM — Geometrically Regularized Associative Memory
+Copyright © 2025 Derek M. Devine
 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+For purposes of this license, “contributors” refers only to individuals whose contributions 
+have been explicitly accepted by the copyright holder.
 
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+GRAM is provided under the following Human-Rights and Consent-Restricted Research License.
 
-2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+----------------------------------------------------------------
+PERMITTED USE
+----------------------------------------------------------------
 
-3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+Permission is hereby granted, free of charge, to any person or organization
+to use, copy, modify, and distribute this software and associated ideas,
+algorithms, and documentation (the “Software”) solely for:
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+1. Non-commercial academic research
+2. Open scientific investigation
+3. Voluntary, consensual medical or therapeutic research
+   (e.g., treatment of dementia, Alzheimer’s disease, brain injury,
+   neurological disease, or restoration of lost function)
+
+All permitted uses must respect human autonomy, informed consent,
+and fundamental human rights.
+
+----------------------------------------------------------------
+PROHIBITED USES
+----------------------------------------------------------------
+
+The Software, or any derivative work, extension, model, or system
+based on the Software, SHALL NOT be used, directly or indirectly, for:
+
+1. Any forced, coerced, mandatory, or non-consensual
+   modification of the human body, brain, nervous system,
+   cognition, identity, or behavior.
+
+2. Any involuntary, forced, mandatory, or coerced
+   psychiatric, psychological, neurological, or behavioral
+   intervention, assessment, classification, or treatment,
+   including uses justified under “mental health,”
+   “public safety,” or “risk mitigation” frameworks.
+
+3. Any integration of artificial intelligence, computation,
+   or technological systems into the human body or brain
+   without the individual’s explicit, informed, and voluntary
+   consent.
+
+4. Any system intended to control, manipulate, restrict,
+   surveil, coerce, profile, or dominate individuals or
+   populations.
+
+5. Any technology that conditions access to food, housing,
+   healthcare, employment, financial systems, civil services,
+   or basic human rights on adoption of technological
+   augmentation, psychiatric compliance, or AI-mediated
+   control.
+
+6. Any use for population control, social credit systems,
+   behavioral enforcement, predictive policing,
+   mass surveillance, or psychological coercion.
+
+7. Military, intelligence, law-enforcement, carceral,
+   detention, or surveillance applications.
+
+8. Any use that undermines human dignity, autonomy,
+   conscience, or freedom, or that treats human beings
+   as programmable, optimizable, or enforceable objects.
+
+----------------------------------------------------------------
+MORAL AND ETHICAL INTENT
+----------------------------------------------------------------
+
+The author explicitly rejects the use of this Software in any system
+that seeks to enslave, coerce, or override human will, conscience,
+or autonomy.
+
+This Software is intended to advance knowledge, healing, and
+understanding — not domination, control, or forced assimilation
+between humans and machines.
+
+----------------------------------------------------------------
+TERMINATION
+----------------------------------------------------------------
+
+Any violation of the above conditions automatically terminates
+all rights granted under this license.
+
+Upon termination, the user must immediately cease all use,
+distribution, and derivative development of the Software.
+
+----------------------------------------------------------------
+ADDITIONAL REDISTRIBUTION CONDITIONS
+----------------------------------------------------------------
+
+In addition to all terms stated above, any redistribution or
+distribution of this Software, or derivative works based thereon,
+must comply with the following conditions:
+
+1. Redistributions of source code must retain the above
+   copyright notice, this list of conditions, and the
+   following disclaimer.
+
+2. Redistributions in binary form must reproduce the above
+   copyright notice, this list of conditions, and the
+   following disclaimer in the documentation and/or other
+   materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of
+   any contributors may be used to endorse or promote
+   products derived from this software without specific
+   prior written permission.
+
+----------------------------------------------------------------
+DISCLAIMER
+----------------------------------------------------------------
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+OR PROFITS; OR BUSINESS INTERRUPTION), HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE), ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+----------------------------------------------------------------
+
