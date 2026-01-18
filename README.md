@@ -250,11 +250,11 @@ Lower values indicate more reliable multi-objective balanceGRAM_φFull and DAM a
 
 ### Figure 6 — Qualitative comparison of GRAM variants and baseline associative memories
 <p align="center">
-  <img src="figures/">
+  <img src="figures/method_comparison.png">
 </p>
 <p align="left">
   <em>
-  Figure 6. Comparisonns cross multiple structural dimensions.  Starred entries denote standout strengths along a given dimension. GRAM variants occupy complementary regimes—ranging from scalar-optimal (GRAM_φFull), to geometry-preserving (GRAM_FS_φFull), to low-sample annealing specialists (GRAM_FeigCooling)—while classical associative memories and baselines exhibit systematic trade-offs and structural limitations, particularly in geometry preservation and low-sample stability.
+  Figure 6. Comparisonns cross multiple structural dimensions.  Starred entries denote standout strengths along a given dimension. GRAM variants occupy complementary regimes—ranging from scalar-optimal (GRAM_φFull), to geometry-preserving (GRAM_FS_φFull), to low-sample annealing specialists (GRAM_FeigCooling)—while classical associative memories and baselines exhibit systematic trade-offs and structural limitations, particularly in geometry preservation and low-sample stability.  *Note - The claims of percolation behavior have not yet been proven and are still under investigation.  Please also keep in mind that these are generalizations based on performance on one particular dataset, which may not hold, or may need to be refined after testing on large number disparate types of data.  
   </em>
 </p>
 
