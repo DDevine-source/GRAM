@@ -29,7 +29,8 @@ GRAM supports **two complementary regimes**, depending on which level of descrip
 
 **1. GRAM as Inference on Emergent Geometry**
 
-(Used in epidemic modeling, forecasting, Agricultural problems like farming optimization and closure problems)
+Useful for epidemic modeling, forecasting, Agricultural problems like farming optimization and closure problems, etc.
+
 | Aspect        | Role                                                    |
 | ------------- | ------------------------------------------------------- |
 | Exact object  | Continuous trajectory manifold                          |
@@ -41,11 +42,32 @@ In this regime, the manifold is assumed to already exist (it's induced by an epi
 This is the regime used in:
 - **epidemic trajectory forecasting**  
 - **PMF-GRAM closure replacing or complementing mean-field models**  
-- **early-warning detection via trajectory entropy**  
+- **early-warning detection via trajectory entropy**
+- 
+**Schematic summary of the process:**
+
+<p align="center">
+  Physical space (optional)<br>
+  ↓<br>
+  Network topology (edges = interaction potential)<br>
+  ↓<br>
+  Local interaction counts (k)<br>
+  ↓<br>
+  Jammed PMF (capacity constraint)<br>
+  ↓<br>
+  Dynamics over network states<br>
+  ↓<br>
+  Projection into descriptor space<br>
+  ↓<br>
+  Continuous trajectory manifold<br>
+  ↓<br>
+  Discrete approximation (GRAM's internal discrete representation of the continuous manifold)
+</p>
+
 
 **2. GRAM-like Dynamics as Emergence of Geometry**
 
-(Used in gravity-like dynamics and emergent geometry studies)
+Useful for studying emergent geometry and gravity-like dynamics.
 
 | Aspect         | Role                             |
 | -------------- | -------------------------------- |
@@ -54,6 +76,23 @@ This is the regime used in:
 | GRAM-like role | Generative emergence of geometry |
 
 In this regime, **discrete stochastic memory is fundamental**, and **geometry itself emerges** as a **stable attractor of trajectory-memory dynamics**. Attraction, curvature, interaction, and basins of stability arise without assuming spacetime or force laws.
+
+**Schematic summary of the process:**
+
+<p align="center">
+  Discrete stochastic transitions<br>
+  ↓<br>
+  Stochastic memory and recall<br>
+  ↓<br>
+  Future-conditioned similarity<br>
+  ↓<br>
+  Emergent geometry<br>
+  ↓<br>
+  Mass, curvature, and force-like dynamics<br>
+  ↓<br>
+  Stable basins and interaction
+</p>
+
 
 This regime demonstrates that:
 
@@ -152,19 +191,48 @@ Note: Some analysis scripts and notebooks listed above are planned and will be a
 ## Key Results
 
 ### Figure 1 — Constraint-Aware Objective Performance
-![Constraint-Aware Objective Performance](figures/gram_comparisons/fig14_constraint_objective_table.png)
+<p align="center">
+  <img src="figures/fig14_constraint_objective_table.png">
+</p>
+
+<p align="left">
+  <em>
+  Figure 1. Constraint-aware multi-objective performance across associative and optimization methods.
+Reported are the median and mean objective values J=LCC_norm+(1-SSR)+(1-SCR), along with cost, self-sufficiency ratio (SSR), self-consumption ratio (SCR), and runtime per query (95% confidence intervals in parentheses). All methods were evaluated under identical constraints (minimum SSR = 0.4, maximum PV = 18,500, maximum BESS = 36,400). GRAM_φFull achieves the lowest median objective value while maintaining favorable cost, SSR, and SCR trade-offs, outperforming classical associative memories and baseline optimizers in robust, constraint-aware selection.
+  </em>
+</p>
 
 ### Figure 2 — Learned Manifold Geometry
-![Learned Manifold Geometry](figures/gram_comparisons/fig15_manifold_surfaces.png)
+<p align="center">
+  <img src="figures/fig15_manifold_surfaces.png">
+</p>
+
+<p align="left">
+  <em>
+  Figure 2. Comparison of learned cost–SSR–SCR manifolds across methods.
+Each surface represents the reconstructed multi-objective response learned by a different algorithm. GRAM variants preserve the curvature, slope, and topology of the underlying Pareto manifold, closely matching the TRUE surface. In contrast, classical associative memories (Hopfield, DAM, MHN) and baseline methods exhibit geometric distortions, collapsed basins, or exaggerated curvature, indicating loss of structural fidelity. This highlights GRAM’s ability to preserve global manifold geometry rather than merely optimizing scalar objectives.
+  </em>
+</p>
 
 ### Figure 3 — Cost Surface Reconstruction Error
-![Cost Surface Error Heatmaps](figures/gram_comparisons/fig16_error_heatmaps.png)
+<p align="center">
+  <img src="figures/fig16_error_heatmaps.png">
+</p>
+
+<p align="left">
+  <em>
+  Figure 3. Absolute reconstruction error heatmaps for cost surfaces across methods.
+Heatmaps show pointwise absolute error between each method’s reconstructed cost surface and the TRUE manifold across the SSR–SCR domain. GRAM variants exhibit uniformly low error regions and smooth gradients, indicating stable and faithful manifold reconstruction. Competing methods display higher error magnitudes and structured artifacts, reflecting local bias, over-fitting, or geometric collapse. GRAM_feigcooling reconstructs with errors at an order of magnitude lower (yellow). These results demonstrate GRAM’s robustness as a geometry-preserving associative model.
+  </em>
+</p>
 
 ### Figure 4 — Distance-to-Utopia (Median Cost)
-![Distance to Utopia](figures/gram_comparisons/fig27_utopia_cost_distance.png)
+<p align="center">
+  <img src="figures/fig27_utopia_cost_distance.png">
+</p>
 
 ### Figure 5 — Normalized Score Comparison
-![Normalized Score Comparison](figures/gram_comparisons/normalized_score.png)
+![Normalized Score Comparison](figures/normalized_score.png)
 
 
 ---
