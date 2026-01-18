@@ -189,7 +189,7 @@ Note: Some analysis scripts and notebooks listed above are planned and will be a
 
 
 ## Key Results
-
+#### Note all of these results come from a real-world data, with 10,000 observations.
 ### Figure 1 — Constraint-Aware Objective Performance
 <p align="center">
   <img src="figures/fig14_constraint_objective_table.png">
