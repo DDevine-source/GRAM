@@ -1,3 +1,5 @@
+This is a custom license. It is NOT the BSD License.
+
 GRAM — Geometrically Regularized Associative Memory
 Copyright © 2025 Derek M. Devine
 All rights reserved.
@@ -90,7 +92,7 @@ Upon termination, the user must immediately cease all use,
 distribution, and derivative development of the Software.
 
 ----------------------------------------------------------------
-ADDITIONAL REDISTRIBUTION CONDITIONS
+ADDITIONAL REDISTRIBUTION CONDITIONS  (NOT A BSD LICENSE)
 ----------------------------------------------------------------
 
 In addition to all terms stated above, any redistribution or
