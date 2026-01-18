@@ -29,7 +29,7 @@ GRAM supports **two complementary regimes**, depending on which level of descrip
 
 **1. GRAM as Inference on Emergent Geometry**
 
-Useful for epidemic modeling, forecasting, Agricultural problems like farming optimization and closure problems, etc.
+Useful for epidemic modeling, forecasting, better interpretation of radiology scans, Agricultural problems like farming optimization and closure problems, etc.
 
 | Aspect        | Role                                                    |
 | ------------- | ------------------------------------------------------- |
