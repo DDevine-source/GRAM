@@ -22,7 +22,7 @@ See `LICENSE` for usage terms and `CITATION.cff` for citation guidance.
 Initial Development by **Derek M. Devine** (2025).
 
 ## Who is this for
-GRAM is intended for researchers working on associative memory, manifold learning, and structured inference in noisy, multi-objective domains.
+GRAM is intended for researchers working on associative memory, manifold learning, and structured inference in noisy, multi-objective domains.  Epidemic modeling, the weather and agricultural are prime examples of where GRAM can be naturally applied.  Applicable to Complex systems in general. 
 
 ## Two Regimes of GRAM (Key Concept)
 GRAM supports **two complementary regimes**, depending on which level of description is treated as exact.
