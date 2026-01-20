@@ -616,7 +616,7 @@ https://colab.research.google.com/drive/1CTk4bNcqYMX_h1c4onQuJCSglXSMsFAs?usp=sh
 
 ## License
 
-This project is licensed under the BSD 3-Clause License. See the `LICENSE` file for details.
+This project is licensed under a human rights license. See the `LICENSE` file for details.
 
 ## Citation
 
