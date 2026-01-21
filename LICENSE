@@ -20,7 +20,7 @@ algorithms, and documentation (the “Software”) solely for:
 1. Non-commercial academic research
 2. Open scientific investigation
 3. Voluntary, consensual medical or therapeutic research
-   (e.g., treatment of dementia, Alzheimer’s disease, brain injury,
+   (e.g., radiological applications, treatment of dementia, Alzheimer’s disease, brain injury,
    neurological disease, or restoration of lost function)
 
 All permitted uses must respect human autonomy, informed consent,
@@ -33,41 +33,61 @@ PROHIBITED USES
 The Software, or any derivative work, extension, model, or system
 based on the Software, SHALL NOT be used, directly or indirectly, for:
 
-1. Any forced, coerced, mandatory, or non-consensual
-   modification of the human body, brain, nervous system,
-   cognition, identity, or behavior.
+1. Any forced, coerced, mandatory, or non-consensual modification
+   of the human body, brain, nervous system, cognition, identity,
+   or behavior.
 
-2. Any involuntary, forced, mandatory, or coerced
-   psychiatric, psychological, neurological, or behavioral
-   intervention, assessment, classification, or treatment,
-   including uses justified under “mental health,”
-   “public safety,” or “risk mitigation” frameworks.
+2. Any involuntary, forced, mandatory, or coerced psychiatric,
+   psychological, neurological, or behavioral intervention,
+   assessment, classification, or treatment, including uses
+   justified under “mental health,” “public safety,” or
+   “risk mitigation” frameworks.
 
 3. Any integration of artificial intelligence, computation,
    or technological systems into the human body or brain
    without the individual’s explicit, informed, and voluntary
    consent.
 
-4. Any system intended to control, manipulate, restrict,
-   surveil, coerce, profile, or dominate individuals or
-   populations.
+4. Any system intended to control, manipulate, coerce, dominate,
+   or systematically restrict the autonomy or agency of
+   individuals or populations in ways that undermine consent
+   or fundamental human rights.
 
-5. Any technology that conditions access to food, housing,
-   healthcare, employment, financial systems, civil services,
-   or basic human rights on adoption of technological
-   augmentation, psychiatric compliance, or AI-mediated
+   This restriction does not apply to voluntary, informed,
+   and non-coercive monitoring or analytical systems, including
+   health, wellness, or research technologies, that are used
+   to support individual well-being and do not impose behavioral
    control.
 
+5. Any technology or system that conditions access to food,
+   housing, healthcare, employment, financial systems,
+   civil services, or other fundamental human rights on
+   coercion, compulsion, or deprivation of individual autonomy.
+
+   This includes—but is not limited to—conditioning such access
+   on technological augmentation, psychiatric or behavioral
+   compliance, AI-mediated control, or any other mechanism
+   that exerts direct or indirect pressure through threat of
+   exclusion, deprivation, or loss of basic rights or services.
+
 6. Any use for population control, social credit systems,
-   behavioral enforcement, predictive policing,
-   mass surveillance, or psychological coercion.
+   behavioral enforcement, mass surveillance, or psychological
+   coercion.
 
-7. Military, intelligence, law-enforcement, carceral,
-   detention, or surveillance applications.
+7. Military, intelligence, or law-enforcement applications
+   that involve mass surveillance, population-level monitoring,
+   predictive or preemptive profiling, coercive control, or
+   deprivation of civil or human rights.
 
-8. Any use that undermines human dignity, autonomy,
-   conscience, or freedom, or that treats human beings
-   as programmable, optimizable, or enforceable objects.
+   This restriction does not prohibit narrowly scoped, lawful
+   law-enforcement or forensic uses conducted with due process,
+   transparency, human oversight, and respect for individual
+   consent and constitutional or human-rights protections.
+
+8. Any use that undermines human dignity, autonomy, conscience,
+   or freedom, or that treats human beings as programmable,
+   optimizable, or enforceable objects.
+
 
 ----------------------------------------------------------------
 MORAL AND ETHICAL INTENT
