@@ -5,9 +5,9 @@ GRAM (Geometrically Regularized Associative Memory) is a geometry-preserving ass
 GRAM is designed for regimes where classical associative memories and scalar-objective optimization fail—specifically, when global geometric structure, curvature, and trajectory shape matter more than local similarity or loss minimization.
 
 # Core Idea:
-Rather than optimizing a single scalar objective, GRAM operates on a learned representation manifold, treating stored states as masses embedded in an information geometry. Queries evolve by descent on this manifold, guided by structured stochasticity and geometric regularization rather than deterministic energy minimization.
+Rather than optimizing a single scalar objective, GRAM operates on a learned representation manifold, treating stored states as structured points embedded in an information geometry. Queries evolve by descent on this manifold, guided by structured stochasticity and geometric regularization rather than deterministic energy minimization.  In multi-objective systems, this manifold often corresponds to a Pareto surface or trade-off frontier defined by competing objectives.
 
-In this sense, GRAM behaves as a geometric manifold learner: stability, recall, and inference arise from curvature-aware dynamics instead of fixed-point attraction.  Stable recall is performed from multi-objective spaces by minimizing local curvature rather than optimizing a global loss.  The framework supports semi-supervised operation and physics-structured inference on learned manifolds.
+In this sense, GRAM behaves as a geometric manifold learner: stability, recall, and inference arise from curvature-aware dynamics instead of fixed-point attraction.  Stable recall is performed from multi-objective spaces by minimizing local curvature rather than optimizing a global loss.  The framework supports semi-supervised operation and structure-aware inference on learned manifolds.
 
 # Notes about Repository:
 This repository contains the core GRAM algorithm and supporting research code for
@@ -290,13 +290,13 @@ $$
 
 where $\nabla_{\mathcal{M}}$ is the gradient along the manifold and $\epsilon_t$ introduces structured stochastic exploration.
 
-This makes GRAM a geometry-preserving associative memory: retrieval proceeds by moving along the structure of the data rather than collapsing to discrete attractors.
+This makes GRAM a geometry-preserving associative memory: retrieval proceeds by moving along the structure of the data rather than collapsing to discrete attractors.  This is particularly important in systems exhibiting equifinality, where multiple distinct configurations of variables produce equivalent outcomes along the same manifold.
 
 ---
 
 ### Flux-based / structured dynamics interpretation
 
-The same process can be viewed through a physics-inspired lens.
+The same process can be viewed through a gemeotrically interpretative lens.
 
 In the GID / SR framework, evolution follows:
 
@@ -377,7 +377,7 @@ generic optimizer.
 
 **GRAM**:
 - Operates on a learned representation manifold (pattern bank / memory)
-- Uses a gravitational metric to measure distance to stored patterns
+- Uses a geometry-aware metric to measure consistency with stored patterns
 - Employs GID-based structured randomness Rφ(m) for updates
 - Uses jammed-PMF sampling for structured perturbations
 - Adapts annealing via spectral diagnostics (γ)
@@ -388,7 +388,7 @@ Instead, it is designed to **recall manifold-consistent states** in a learned
 representation.
 
 While SA and GRAM are related in spirit (both use annealed stochastic search),
-SA is a generic heuristic, whereas GRAM is a **physics-structured machine for
+SA is a generic heuristic, whereas GRAM is a **stucture-aware machine for
 manifold-aware memory and selection**.
 
 ---
@@ -401,7 +401,7 @@ is characterized by gravitational recall, multi-objective manifold preservation,
 and physics-inspired feature selection.
 
 Classical associative memories (Hopfield, BAM, MHN) operate by maximizing
-similarity.  In contrast, GRAM performs **gravitational descent on an information
+similarity.  In contrast, GRAM performs **geometry-aware descent on an information
 manifold**.  Stored patterns are treated as masses embedded in a Pareto surface
 (such as a Cost–SSR–SCR surface), and queries descend toward regions of high geometric and
 physical consistency rather than simple nearest neighbors.
@@ -456,7 +456,7 @@ Taken together, GRAM unifies:
 
 
 This places GRAM in a unique region of algorithmic space—not a variant of Hopfield, SOM, or backprop, but a new synthesis with capabilities none of those frameworks possess.  GRAM is not a classical associative memory at all.  
-GRAM is a gravitational manifold learner that performs stable recall from multi-objective spaces by minimizing local curvature rather than a global scalar objective.  It’s semi-supervised, and performs physics-structured retrieval and inference on a learned manifold.
+GRAM is a gravitational manifold learner that performs stable recall from multi-objective spaces by minimizing local curvature rather than a global scalar objective.  It’s semi-supervised, and performs structure-aware robust retrieval and inference on a learned manifold.
 
 ## It excels when the task involves:
 1.	High-dimensional data embedded on a lower-dimensional manifold
@@ -468,7 +468,7 @@ GRAM is a gravitational manifold learner that performs stable recall from multi-
    
 ## USE CASES: 
 GRAM will be used most likely in the following applications:
-1. Environmental and agricultural systems (climate, irrigation, yield modeling)
+1. Environmental and agricultural systems (climate, irrigation, yield modeling) (e.g., identifying interaction-driven yield regimes and minimal interventions such as irrigation timing, planting strategy, and soil management adjustments)
 2. Multi-energy and engineering design systems
 3. Radiological imaging and biomedical data
 4. Complex systems modeling and regime analysis
@@ -477,8 +477,9 @@ GRAM will be used most likely in the following applications:
 
 ## Where GRAM is relevant
 
-GRAM is applicable wherever data lie on a **manifold rather than a discrete set of points**. Its most compelling use cases arise in multi-objective systems where preserving geometric structure is critical, including environmental modeling, agricultural systems, radiological imaging, and engineering design problems.
-For example, one use case is Radiological anomaly retrieval under structured noise. This is where Hopfield networks previously tried — and failed — to replace CNNs.  Transformers struggle because they optimize predictive loss, not geometric stability. Hopfield-like systems fail due to lack of multi-objective logic.  But, GRAM, with jammed-PMF + NEAR recursion, is actually suited for it.
+GRAM is applicable wherever data lie on a **manifold rather than a discrete set of points**. Its most compelling use cases arise in multi-objective systems, especially systems where solutions lie on Pareto surfaces or trade-off frontiers rather than discrete optima, where preserving geometric structure is critical, including environmental modeling, agricultural systems, radiological imaging, and engineering design problems. For example in agricultural systems, where different combinations of environmental and management variables can produce similar yield outcomes (equifinality).
+
+Another example use case is Radiological anomaly retrieval under structured noise. This is where Hopfield networks previously tried — and failed — to replace CNNs.  Transformers struggle because they optimize predictive loss, not geometric stability. Hopfield-like systems fail due to lack of multi-objective logic.  But, GRAM, with jammed-PMF + NEAR recursion, is actually suited for it.
 
 A motivating example is **medical radiological imaging**.  In this setting, classical associative memories (Hopfield, MHN) and modern transformers
 often struggle for several reasons:
