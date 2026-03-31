@@ -309,8 +309,25 @@ where the first term represents curvature-driven movement and the second term re
 Under this view, stability arises from balancing curvature and structured randomness, leading to convergence toward manifold-consistent states rather than point attractors.
 
 ---
+### Correspondence between formulations
 
-These two formulations are equivalent: the first expresses GRAM as geometric inference, and the second as structured stochastic dynamics.
+The geometric inference and flux-based formulations describe the same underlying process using different language. The correspondence between terms is:
+
+| Geometric / Inference View | Flux / Dynamics View | Intuition |
+|--------------------------|---------------------|----------|
+| $J(q)$ (objective) | $E$ (energy / potential) | Scalar function describing system structure |
+| $D_{\mathcal{M}}(q, X)$ | geometric compatibility / similarity | Measures how well a state fits the manifold |
+| $C(q)$ (curvature regularization) | $\nabla_a E$ (curvature term) | Penalizes geometrically inconsistent directions |
+| $-\nabla_{\mathcal{M}} J$ | $-\nabla_a E$ | Direction of curvature-driven movement |
+| $\epsilon_t$ (stochastic exploration) | $R\phi(m_i)$ (structured flux) | Controlled randomness guiding exploration |
+| $\eta$ (step size) | scaling of flux term | Controls magnitude of updates |
+| manifold $\mathcal{M}$ | trajectory / attractor manifold | Space of feasible system states |
+| update: $x_{t+1} = x_t - \eta \nabla_{\mathcal{M}} J + \epsilon_t$ | $\Delta A = -\nabla_a E + R\phi(m_i)$ | Same update expressed differently |
+| convergence to manifold-consistent state | convergence to stable attractor | Both describe stabilization on geometry |
+
+These two formulations are mathematically equivalent descriptions of the same update process, expressed in geometric inference language and structured dynamics language respectively.
+
+This correspondence highlights that GRAM can be interpreted either as geometry-aware inference or as structured stochastic dynamics, depending on the modeling perspective.
 
 ---
 
