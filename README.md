@@ -9,6 +9,18 @@ Rather than optimizing a single scalar objective, GRAM operates on a learned rep
 
 In this sense, GRAM behaves as a geometric manifold learner: stability, recall, and inference arise from curvature-aware dynamics instead of fixed-point attraction.  Stable recall is performed from multi-objective spaces by minimizing local curvature rather than optimizing a global loss.  The framework supports semi-supervised operation and structure-aware inference on learned manifolds.
 
+### Associative Memory Paradigms
+
+| Paradigm | Mechanism | Retrieval Behavior |
+|---------|----------|-------------------|
+| **Attractor-Based** | Energy minimization | Converges to a stored attractor |
+| **Similarity-Based** | Nearest neighbor search | Selects closest stored point |
+| **GRAM (Geometric)** | Manifold inference | Navigates a learned manifold and retrieves structurally consistent states |
+
+GRAM introduces a third paradigm in which associative memory is defined as geometry-preserving inference on a manifold of feasible system states, rather than collapse or selection.
+
+In multi-objective systems, this manifold corresponds to a Pareto surface or trade-off frontier, allowing GRAM to preserve relationships between solutions rather than collapsing them.
+
 # Notes about Repository:
 This repository contains the core GRAM algorithm and supporting research code for
 structured associative memory, open-set retrieval, and controlled exploration of
@@ -349,7 +361,7 @@ frontiers** (for example, Cost–SSR Pareto curves).
 
 ---
 
-### Relationship to physics-based and annealing methods
+### Relationship to current annealing methods
 
 GRAM is not the first physics-inspired AI method, but it is likely the first
 associative memory / retrieval framework that explicitly combines, in a single
