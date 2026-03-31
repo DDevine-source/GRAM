@@ -17,7 +17,7 @@ In this sense, GRAM behaves as a geometric manifold learner: stability, recall, 
 | **Similarity-Based** | Nearest neighbor search | Selects closest stored point |
 | **GRAM (Geometric)** | Manifold inference | Navigates a learned manifold and retrieves structurally consistent states |
 
-GRAM introduces a third paradigm in which associative memory is defined as geometry-preserving inference on a manifold of feasible system states, rather than collapse or selection.
+GRAM introduces a third paradigm in which associative memory is defined as geometry-preserving inference on a manifold of feasible system states, rather than convergence to attractors or selection of nearest neighbors.
 
 In multi-objective systems, this manifold corresponds to a Pareto surface or trade-off frontier, allowing GRAM to preserve relationships between solutions rather than collapsing them.
 
