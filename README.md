@@ -269,67 +269,73 @@ Lower values indicate more reliable multi-objective balanceGRAM_φFull and DAM a
 </p>
 
 ---
-**GRAM** is a highly structured associative memory model that integrates:
 
-- **Gravitational Information Dynamics (GID)**  
+### Geometric inference formulation
+
+GRAM can be expressed first in a geometry-aware inference form.
+
+Let stored patterns define a representation manifold $\mathcal{M}$ and define the objective
+
+$$
+J(q) = D_{\mathcal{M}}(q, X) + \lambda C(q)
+$$
+
+where:
+
+- $D_{\mathcal{M}}(q, X)$ measures manifold-consistent similarity
+- $C(q)$ is a curvature regularization term enforcing geometric consistency
+
+The update process can then be written as
+
+$$
+x_{t+1} = x_t - \eta \nabla_{\mathcal{M}} J(x_t) + \epsilon_t
+$$
+
+where:
+
+- $\nabla_{\mathcal{M}}$ is the gradient along the manifold
+- $\eta$ is a step size parameter
+- $\epsilon_t$ represents structured stochastic exploration
+
+This formulation emphasizes GRAM as a geometry-preserving associative inference process on a learned manifold of feasible states.
+
+### Flux-based / structured dynamics interpretation
+
+The same retrieval process can also be interpreted in a flux-based, physics-structured form.
+
+In the GID / SR framework, system evolution is governed by a flux law:
+
+$$
+R\phi(m_i) = \Delta A + \nabla_a E
+$$
+
+or equivalently
+
+$$
+\Delta A = - \nabla_a E + R\phi(m_i)
+$$
+
+Informally, this says that state change is governed by the balance between a curvature-driven term and a structured stochastic flux term. Under this interpretation, GRAM converges toward manifold-preserving recall rather than point-attractor collapse.
+
+Thus, the inference formulation above and the flux-based description here are two equivalent views of the same GRAM retrieval process: one stated in geometric optimization language, and one stated in structured-dynamics language.
+
+---
+
+**GRAM** is a highly structured associative memory model that integrates:
+  
 - **Structured Randomness (SR)** via φ-annealed stochastic flux  
 - **Spectral diagnostics** (SPR, γ) of the Hebbian field  
 - **Jammed-PMF neighborhood sampling** from CA saturation  
 - **Multi-channel certification** (energy gap, signatures, minhash)
 
 GRAM generalizes classical associative memories (Hopfield, MHN, DAM, etc.)
-into a *gravitationally regularized, recursively annealed* architecture
+into a *geometrically regularized, recursively annealed* architecture
 that is both **robust under noise** and **aligned with multi-objective
 frontiers** (for example, Cost–SSR Pareto curves).
 
 **Motivation** GRAM is motivated by the observation that many associative memory models implicitly reduce multi-objective problems to scalar optimization, which can distort or collapse the underlying manifold structure under structured noise.
 
 **Key insight** GRAM is designed for regimes where scalar objective optimization breaks down—specifically, when the task requires preserving multi-objective manifold geometry in the presence of structured noise.
-
----
-
-## Conceptual summary
-
-In the GID / SR framework, system evolution is governed by a flux law:
-
-Rφ(mᵢ) = ΔA + ∇ₐE
-
-or equivalently:
-
-ΔA = -∇ₐE + Rφ(mᵢ) 
-
-Law (informal):
-In recursive stochastic systems with local saturation and margin-dependent noise, stability emerges when stochastic flux scales with curvature according to a fixed ratio.  Under this condition, the system converges to a manifold-preserving attractor rather than a point attractor.
-
-where:
-- **ΔA** is the realized change in state,
-- **∇ₐE** is curvature (the gradient of an effective potential),
-- **Rφ** is a structured stochastic flux, scaled by the inverse golden ratio (φ⁻¹)
-  and modulated by local margins, spectral gaps, and adjacency structure.
-
-GRAM implements this law at the level of associative recall:
-
-- The **Hebbian matrix** (W) and field score S′(v) = ½ vᵀWv provide curvature.
-- **Hamming distance**, margins (mᵢ = vᵢ(Wv)ᵢ), and empirical score changes
-  define a stochastic noise scale.
-- **φ-annealed guided dither** (bit flips with Kₜ ≈ φ·K₀) supplies structured flux.
-- **Multi-channel certification** (score gap, ones-count, pair signatures,
-  minhash) enforces a flux budget:
-  recall is accepted as **KNOWN** only when deviations are consistent with
-  structured randomness (otherwise **NEAR-UNKNOWN** or **UNKNOWN**).
-
-GRAM is an associative memory model that combines Hebbian fields with gravitational information dynamics, including:
-
-- SPR/γ-based spectral diagnostics
-- Feigenbaum–golden φ-annealed guided dither
-- Jammed-PMF neighborhood sampling
-- Multi-channel certification of matches
-
-GRAM generalizes Hopfield-style recall into a **gravitationally regularized,
-open-set, manifold-aware selector** that preserves the local structure of the
-learned representation manifold.  The manifold is an N-dimensional space determined
-by the number of variables, and recall proceeds by minimizing **local curvature**
-rather than optimizing a single global objective.
 
 ---
 
