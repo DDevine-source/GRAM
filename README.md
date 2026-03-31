@@ -272,52 +272,45 @@ Lower values indicate more reliable multi-objective balanceGRAM_φFull and DAM a
 
 ### Geometric inference formulation
 
-GRAM can be expressed first in a geometry-aware inference form.
+GRAM can be expressed as a geometry-aware inference process on a learned manifold of feasible system states.
 
-Let stored patterns define a representation manifold $\mathcal{M}$ and define the objective
+Let stored patterns define a representation manifold $\mathcal{M}$ and define
 
 $$
 J(q) = D_{\mathcal{M}}(q, X) + \lambda C(q)
 $$
 
-where:
+where $D_{\mathcal{M}}$ measures manifold-consistent similarity and $C(q)$ enforces geometric consistency via curvature regularization.
 
-- $D_{\mathcal{M}}(q, X)$ measures manifold-consistent similarity
-- $C(q)$ is a curvature regularization term enforcing geometric consistency
-
-The update process can then be written as
+The update process is:
 
 $$
 x_{t+1} = x_t - \eta \nabla_{\mathcal{M}} J(x_t) + \epsilon_t
 $$
 
-where:
+where $\nabla_{\mathcal{M}}$ is the gradient along the manifold and $\epsilon_t$ introduces structured stochastic exploration.
 
-- $\nabla_{\mathcal{M}}$ is the gradient along the manifold
-- $\eta$ is a step size parameter
-- $\epsilon_t$ represents structured stochastic exploration
+This makes GRAM a geometry-preserving associative memory: retrieval proceeds by moving along the structure of the data rather than collapsing to discrete attractors.
 
-This formulation emphasizes GRAM as a geometry-preserving associative inference process on a learned manifold of feasible states.
+---
 
 ### Flux-based / structured dynamics interpretation
 
-The same retrieval process can also be interpreted in a flux-based, physics-structured form.
+The same process can be viewed through a physics-inspired lens.
 
-In the GID / SR framework, system evolution is governed by a flux law:
-
-$$
-R\phi(m_i) = \Delta A + \nabla_a E
-$$
-
-or equivalently
+In the GID / SR framework, evolution follows:
 
 $$
 \Delta A = - \nabla_a E + R\phi(m_i)
 $$
 
-Informally, this says that state change is governed by the balance between a curvature-driven term and a structured stochastic flux term. Under this interpretation, GRAM converges toward manifold-preserving recall rather than point-attractor collapse.
+where the first term represents curvature-driven movement and the second term represents structured stochastic flux.
 
-Thus, the inference formulation above and the flux-based description here are two equivalent views of the same GRAM retrieval process: one stated in geometric optimization language, and one stated in structured-dynamics language.
+Under this view, stability arises from balancing curvature and structured randomness, leading to convergence toward manifold-consistent states rather than point attractors.
+
+---
+
+These two formulations are equivalent: the first expresses GRAM as geometric inference, and the second as structured stochastic dynamics.
 
 ---
 
