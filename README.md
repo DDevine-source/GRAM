@@ -5,7 +5,7 @@ GRAM (Geometrically Regularized Associative Memory) is a geometry-preserving ass
 GRAM is designed for regimes where classical associative memories and scalar-objective optimization fail—specifically, when global geometric structure, curvature, and trajectory shape matter more than local similarity or loss minimization.
 
 # Core Idea:
-Rather than optimizing a single scalar objective, GRAM operates on a learned representation manifold, treating stored states as masses embedded in an information geometry. Queries evolve by gravitational descent on this manifold, guided by structured stochasticity and geometric regularization rather than deterministic energy minimization.
+Rather than optimizing a single scalar objective, GRAM operates on a learned representation manifold, treating stored states as masses embedded in an information geometry. Queries evolve by descent on this manifold, guided by structured stochasticity and geometric regularization rather than deterministic energy minimization.
 
 In this sense, GRAM behaves as a geometric manifold learner: stability, recall, and inference arise from curvature-aware dynamics instead of fixed-point attraction.  Stable recall is performed from multi-objective spaces by minimizing local curvature rather than optimizing a global loss.  The framework supports semi-supervised operation and physics-structured inference on learned manifolds.
 
@@ -28,14 +28,14 @@ See `LICENSE` for usage terms and `CITATION.cff` for citation guidance.
 Initial development by **Derek M. Devine** (2025). Manuscript in preparation.
 
 ## Who is this for
-GRAM is intended for researchers working on associative memory, manifold learning, and structured inference in noisy, multi-objective domains.  Epidemic modeling, the weather, agricultural, and better interpretation of radiological data are prime examples of where GRAM can be naturally applied.  GRAM is applicable to Complex systems in general. 
+GRAM is intended for researchers working on associative memory, manifold learning, and structured inference in noisy, multi-objective systems. Applications include environmental modeling, agricultural systems, multi-energy design, radiological imaging, and complex systems more broadly.
 
 ## Two Regimes of GRAM (Key Concept)
 GRAM supports **two complementary regimes**, depending on which level of description is treated as exact.
 
 **1. GRAM as Inference on Emergent Geometry**
 
-Useful for epidemic modeling, forecasting, better interpretation of radiology scans, agricultural problems like farming optimization, and closure problems, etc.
+Useful for structured inference in systems, including environmental modeling, agricultural systems, multi-energy design, radiological imaging, and other multi-objective domains.
 
 | Aspect        | Role                                                    |
 | ------------- | ------------------------------------------------------- |
@@ -43,12 +43,13 @@ Useful for epidemic modeling, forecasting, better interpretation of radiology sc
 | Approximation | Discrete samples / kNN / bitstrings                     |
 | GRAM’s role   | Efficient inference, recall, and uncertainty estimation |
 
-In this regime, the manifold is assumed to already exist (it's induced by an epidemic or network process). **GRAM exploits its geometry to infer future behavior**, identify turning points, and provide fast, uncertainty-aware predictions.
+
+In this regime, the manifold is induced by an underlying system process (e.g., environmental, physical, biological, or engineered systems). **GRAM exploits its geometry to infer future behavior**, identify turning points, and provide fast, uncertainty-aware predictions.
 
 This is the regime used in:
-- **epidemic trajectory forecasting**  
+- **trajectory forecasting in structured systems**  
 - **PMF-GRAM closure replacing or complementing mean-field models**  
-- **early-warning detection via trajectory entropy**
+- **early-warning detection of regime transitions**
   
 **Schematic summary of the process:**
 
@@ -73,7 +74,7 @@ This is the regime used in:
 
 **2. GRAM-like Dynamics as Emergence of Geometry**
 
-Useful for studying emergent geometry and gravity-like dynamics.
+Useful for studying emergent geometry dynamics.
 
 | Aspect         | Role                             |
 | -------------- | -------------------------------- |
@@ -451,20 +452,17 @@ GRAM is a gravitational manifold learner that performs stable recall from multi-
    
 ## USE CASES: 
 GRAM will be used most likely in the following applications:
-1.	Radiology, MRI, EEG 
-2.	Complex systems (disease modeling, climate, irrigation, ecological modeling, fluids, turbulence)
-3.	AI: next-generation associative memories
-4.	Biomedical multi-objective modeling
-5.	Neuroscience memory and perception models
-6.	Aerospace/NASA design frontiers
-7.	Genomics/proteomics manifold modeling
-8.	Economics & risk frontier modeling
-9.	Inverse problems and missing data
+1. Environmental and agricultural systems (climate, irrigation, yield modeling)
+2. Multi-energy and engineering design systems
+3. Radiological imaging and biomedical data
+4. Complex systems modeling and regime analysis
+5. Data mining and representation learning
+6. Scientific and engineering inverse problems
 
 ## Where GRAM is relevant
 
-Anywhere the data lie on a **manifold rather than a discrete set of points**,
-GRAM is applicable.  Its most compelling use case is Radiological anomaly retrieval under structured noise. This is where Hopfield networks previously tried — and failed — to replace CNNs.  Transformers struggle because they optimize predictive loss, not geometric stability. Hopfield-like systems fail due to lack of multi-objective logic.  But, GRAM, with jammed-PMF + NEAR recursion, is actually suited for it.
+GRAM is applicable wherever data lie on a **manifold rather than a discrete set of points**. Its most compelling use cases arise in multi-objective systems where preserving geometric structure is critical, including environmental modeling, agricultural systems, radiological imaging, and engineering design problems.
+For example, one use case is Radiological anomaly retrieval under structured noise. This is where Hopfield networks previously tried — and failed — to replace CNNs.  Transformers struggle because they optimize predictive loss, not geometric stability. Hopfield-like systems fail due to lack of multi-objective logic.  But, GRAM, with jammed-PMF + NEAR recursion, is actually suited for it.
 
 A motivating example is **medical radiological imaging**.  In this setting, classical associative memories (Hopfield, MHN) and modern transformers
 often struggle for several reasons:
@@ -499,7 +497,7 @@ Reliability is inherent to the design: GRAM performs best when multiple objectiv
 - **CNNs** often fail in low-signal or highly corrupted regimes.
 - **Transformers** optimize predictive loss but do not preserve geometric structure, making them ill-suited for manifold reconstruction.
 
-GRAM’s jammed-PMF and NEAR-region mechanisms make it well suited for these settings, particularly in **radiological anomaly detection under structured noise**.
+GRAM’s jammed-PMF and NEAR-region mechanisms make it well suited for these settings, particularly in **particularly in structured, noisy, multi-objective domains**.
 
 **Existing associative memories optimize scalar objectives and therefore cannot preserve multi-objective manifold geometry under structured noise.  GRAM provably does, and the failure mode of baselines is structural, not parametric.**
 
